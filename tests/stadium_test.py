@@ -21,6 +21,6 @@ class TestStadium(unittest.TestCase):
     def test_stadium_visited_starts_false(self):
         self.assertEqual(False, self.stadium.visited)
     
-    # def test_can_mark_test_complete(self):
-    #     self.task.mark_complete()
-    #     self.assertEqual(True, self.task.completed)
+    def test_can_mark_test_complete(self):
+        self.stadium.mark_visited()
+        self.assertEqual(True, self.stadium.visited)

@@ -18,6 +18,6 @@ class TestCountry(unittest.TestCase):
         self.assertEqual(False, self.country.visited)
         
     
-    # def test_can_mark_test_complete(self):
-    #     self.task.mark_complete()
-    #     self.assertEqual(True, self.task.completed)
+    def test_can_mark_test_complete(self):
+        self.country.mark_visited()
+        self.assertEqual(True, self.country.visited)

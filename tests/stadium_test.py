@@ -11,9 +11,9 @@ class TestStadium(unittest.TestCase):
         self.assertEqual("St James' Park", self.stadium.name)
         
         
-    # def test_task_has_assignee(self):
-    #     self.assertEqual("Ada Lovelace", self.task.assignee)
-       
+    def test_stadium_type(self):
+        self.assertEqual("Football", self.stadium.type)
+
         
     # def test_task_has_duration(self):
     #     self.assertEqual(60, self.task.duration)

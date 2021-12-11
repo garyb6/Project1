@@ -11,9 +11,9 @@ class TestCountry(unittest.TestCase):
         self.assertEqual("England", self.country.name)
         
         
-    # def test_task_has_assignee(self):
-    #     self.assertEqual("Ada Lovelace", self.task.assignee)
-       
+    def test_country_lannguage(self):
+        self.assertEqual("English", self.country.language)
+
         
     # def test_task_has_duration(self):
     #     self.assertEqual(60, self.task.duration)

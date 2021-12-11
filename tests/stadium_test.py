@@ -4,7 +4,7 @@ from models.stadium import Stadium
 class TestStadium(unittest.TestCase):
     
     def setUp(self):
-        self.stadium = Stadium("St James' Park", "Football", "England", True)
+        self.stadium = Stadium("St James' Park", "Football", "England", False)
     
     
     def test_stadium_has_name(self):
@@ -15,13 +15,11 @@ class TestStadium(unittest.TestCase):
         self.assertEqual("Football", self.stadium.type)
 
         
-    # def test_task_has_duration(self):
-    #     self.assertEqual(60, self.task.duration)
+    def test_stadium_has_country(self):
+        self.assertEqual("England", self.stadium.country)
     
-    
-    # def test_task_completed_starts_false(self):
-    #     self.assertEqual(False, self.task.completed)
-        
+    def test_stadium_visited_starts_false(self):
+        self.assertEqual(False, self.stadium.visited)
     
     # def test_can_mark_test_complete(self):
     #     self.task.mark_complete()

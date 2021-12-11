@@ -8,7 +8,7 @@ class TestCountry(unittest.TestCase):
     
     
     def test_country_has_name(self):
-        self.assertEqual("St James' Park", self.country.name)
+        self.assertEqual("England", self.country.name)
         
         
     # def test_task_has_assignee(self):

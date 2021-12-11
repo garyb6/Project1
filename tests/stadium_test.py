@@ -4,7 +4,7 @@ from models.stadium import Stadium
 class TestStadium(unittest.TestCase):
     
     def setUp(self):
-        self.stadium = Stadium("St James' Park", "Football", England, True)
+        self.stadium = Stadium("St James' Park", "Football", "England", True)
     
     
     def test_stadium_has_name(self):

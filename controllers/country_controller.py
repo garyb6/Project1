@@ -5,6 +5,6 @@ import repositories.country_repository as country_repository
 
 countries_blueprint = Blueprint("countries", __name__)
 
-@countries_blueprint.route("/countries")
-def countries():
-    pass 
+@countries_blueprint.route("/home")
+def home():
+    

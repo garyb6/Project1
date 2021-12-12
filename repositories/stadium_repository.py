@@ -3,14 +3,15 @@ from db.run_sql import run_sql
 from models.country import Country
 from models.stadium import Stadium
 import repositories.stadium_repository as stadium_repository 
+import repositories.country_repository as country_repository 
 
-# def save(country):
-#     sql = "INSERT INTO countries (name, language, visited) VALUES (%s, %s, %s) RETURNING *"
-#     values = [country.name, country.language, country.visited]
-#     results = run_sql(sql, values)
-#     id = results[0]['id']
-#     country.id = id
-#     return country 
+def save(stadium):
+    sql = "INSERT INTO stadium (name, category, country_id, visited) VALUES (%s, %s, %s, %s) RETURNING *"
+    values = [stadium.name, stadium.category, stadium.country.id, stadium.visited]
+    results = run_sql(sql, values)
+    id = results[0]['id']
+    stadium.id = id
+    return stadium 
 
 def select_all():
     stadiums = []
@@ -20,3 +21,27 @@ def select_all():
         stadium = Stadium(row['name'], row['category'], row['country'], row['visited'], row['id'])
         stadiums.append(stadium)
     return stadiums 
+
+def select():
+    stadium = None
+    sql = "SELECT * FROM stadiums WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    if result is not None:
+        country = country_repository.select(result['country_id'])
+        stadium = Stadium(result['name'], result['category'], country, result['visited'], result['id'])
+        return stadium 
+
+def delete_all():
+    sql = "DELETE FROM stadiums"
+    run_sql(sql)
+
+def delete():
+    sql = "DELETE FROM stadiums WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+def update(stadium):
+    sql = "UPDATE stadiums SET (name, category, country_id, visited) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [stadium.name, stadium.category, stadium.country.id, stadium.visited, stadium.id]
+    run_sql(sql, values)

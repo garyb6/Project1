@@ -7,7 +7,6 @@ import repositories.country_repository as country_repository
 stadium_repository.delete_all() 
 country_repository.delete_all() 
 
-# need to add countries and stadiums 
 
 country1 = Country("Australia", "English", False)
 country_repository.save(country1)

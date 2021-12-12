@@ -7,4 +7,4 @@ countries_blueprint = Blueprint("countries", __name__)
 
 @countries_blueprint.route("/home")
 def home():
-    
+    pass 

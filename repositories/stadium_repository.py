@@ -23,7 +23,7 @@ def select_all():
         stadiums.append(stadium)
     return stadiums 
 
-def select():
+def select(id):
     stadium = None
     sql = "SELECT * FROM stadiums WHERE id = %s"
     values = [id]
@@ -37,7 +37,7 @@ def delete_all():
     sql = "DELETE FROM stadiums"
     run_sql(sql)
 
-def delete():
+def delete(id):
     sql = "DELETE FROM stadiums WHERE id = %s"
     values = [id]
     run_sql(sql, values)

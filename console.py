@@ -11,7 +11,7 @@ country_repository.delete_all()
 country1 = Country("Australia", "English", False)
 country_repository.save(country1)
 
-country2 = Country("Portugal", "Portguese", True)
+country2 = Country("Portugal", "Portuguese", True)
 country_repository.save(country2)
 
 country3 = Country("Germany", "German", True)

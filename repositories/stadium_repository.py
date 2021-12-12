@@ -6,7 +6,7 @@ import repositories.stadium_repository as stadium_repository
 import repositories.country_repository as country_repository 
 
 def save(stadium):
-    sql = "INSERT INTO stadium (name, category, country_id, visited) VALUES (%s, %s, %s, %s) RETURNING *"
+    sql = "INSERT INTO stadiums (name, category, country_id, visited) VALUES (%s, %s, %s, %s) RETURNING *"
     values = [stadium.name, stadium.category, stadium.country.id, stadium.visited]
     results = run_sql(sql, values)
     id = results[0]['id']
@@ -18,7 +18,8 @@ def select_all():
     sql = "SELECT * from stadiums"
     results = run_sql(sql)
     for row in results:
-        stadium = Stadium(row['name'], row['category'], row['country'], row['visited'], row['id'])
+        country = country_repository.select(row['country_id'])
+        stadium = Stadium(row['name'], row['category'], country, row['visited'], row['id'])
         stadiums.append(stadium)
     return stadiums 
 

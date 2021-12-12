@@ -11,14 +11,17 @@
     <header>
         <nav>
             <ul>
-                <!-- <li><a href="{{url_for('home') }}">Home</a></li> -->
-
+                <li><a href="{{url_for('home') }}">Home</a></li>
+                <li><a href="url_for('stadiums') }}">Stadiums</a></li>
+                <li><a href="url_for('countries') }}">Countries</a></li>
             </ul>
         </nav>
     </header>
     {%block home%}
     {% endblock %}
-
+    {% block content %}
+        
+    {% endblock content %}
     
 </body>
 </html>

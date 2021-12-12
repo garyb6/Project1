@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+hello pet
+
+{% for country in all_countries %}
+    <div class="country">
+        <div class="content">
+        <a href="/countries/{{country.id}}">{{country.name}}</a>
+        <div class="name">
+            {{country.language}}
+            
+            <p><i>{{country}}</i></p>
+        </div>
+        <div class="buttons">
+            
+<!-- 
+            <form class="delete-form" action="/books/{{book.id}}/delete" method="POST">
+            <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+            </form> -->
+        </div>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}

@@ -7,4 +7,5 @@ stadiums_blueprint = Blueprint("stadiums", __name__)
 
 @stadiums_blueprint.route("/stadiums")
 def stadiums():
-    pass 
+    stadiums = stadium_repository.select_all()
+    return render_template("stadiums/index.html", all_stadiums = stadiums)

@@ -13,7 +13,7 @@ def countries():
 #NEW
 @countries_blueprint.route("/countries/new", methods=['GET'])
 def new_country():
-    return render_template("country/new.html", all_countries = countries)
+    return render_template("countries/new.html")
 
 # CREATE
 @countries_blueprint.route("/countries",  methods=['POST'])

@@ -15,8 +15,13 @@
 
     <div>
         <label for="visited">Have you been there before?</label>
-        <input type="checkbox" id="visited" name="visited" value={{country.visited}} checked>
-    </div>
+        <select id="visited" name="visited">
+    
+        <option value="true"{% if visited == True %} selected="selected" {% endif %}>Yes</option>
+        <option value="false"{% if visited == False %} selected="selected" {% endif %}>No</option>
+    
+        </select>
+        </div>
     <button type="submit">Add Country</button>
 
 </form>

@@ -1,4 +1,6 @@
 {% extends "base.html" %}
-{% block home %}
-Hello Pet.
+{% block content %}
+
+<button><a href="{{url_for('stadiums.stadiums') }}">Stadiums</a></button>
+<button><a href="{{url_for('countries.countries') }}">Countries</a></button>
 {% endblock %}

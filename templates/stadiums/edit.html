@@ -24,9 +24,14 @@
         </select>
     </div>
     <div>
-        <label for="visited">Visited?</label>
-        <input type="checkbox" id="visited" name="visited" value={{stadium.visited}} checked>
-    </div>
+        <label for="visited">Visited:</label>
+        <select id="visited" name="visited">
+    
+        <option value="true"{% if stadium.visited == True %} selected="selected" {% endif %}>True</option>
+        <option value="false"{% if stadium.visited == False %} selected="selected" {% endif %}>False</option>
+    
+        </select>
+        </div>
     <button type="submit">Stadium update!</button>
 
 </form>

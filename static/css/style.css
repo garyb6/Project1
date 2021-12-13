@@ -1,4 +1,4 @@
-.header{background-color: rgb(174, 190, 220);}
+header{background-color: rgb(120, 139, 174);}
 
 #image {
     width:100vw;
@@ -8,4 +8,24 @@
     background-size: cover
 }
 
+nav{
+    float: center;
+    margin:0px;
+    padding:10px;
+    list-style: none
+}
 
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 60px
+}
+.container{
+    width: 90%;
+    margin: 0 auto
+}

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -12,8 +13,9 @@
     <title>Stadium Bucket List</title>
 </head>
 <body>
-    <header class=header>
-        <nav>
+    <header>
+        <div class="container">
+            <nav>
             <ul>
                 <li><a href="{{url_for('home') }}">Home</a></li>
                 <li><a href="{{url_for('stadiums.stadiums') }}">Stadiums</a></li>
@@ -21,7 +23,8 @@
                 <li><a href="{{url_for('countries.new_country') }}">Add a Country!</a></li>
                 <li><a href="{{url_for('stadiums.new_stadium') }}">Add a Stadium!</a></li>
             </ul>
-        </nav>
+            </nav>
+        </div>
     </header>
     {%block home%}
     {% endblock %}

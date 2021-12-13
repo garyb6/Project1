@@ -60,7 +60,7 @@ def update_stadium(id):
 @stadiums_blueprint.route("/stadiums/<id>/delete", methods=['POST'])
 def delete_stadium(id):
     stadium_repository.delete(id)
-    return redirect('/') 
+    return redirect('/stadiums') 
 #might need to change the redirect above
 
 #need to create stadium and country show html next. 

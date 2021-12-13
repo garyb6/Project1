@@ -32,7 +32,7 @@ def create_stadium():
 @stadiums_blueprint.route("/stadiums/<id>", methods=['GET'])
 def show_stadium(id):
     stadium = stadium_repository.select(id)
-    return render_template('books/show.html', stadium = stadium)
+    return render_template('stadiums/show.html', stadium = stadium)
 
 # EDIT
 # GET '/stadiums/<id>/edit'
@@ -56,9 +56,12 @@ def update_stadium(id):
     return redirect('/stadiums')
 
 # DELETE
-# DELETE '/books/<id>'
+# DELETE '/stadiums/<id>'
 @stadiums_blueprint.route("/stadiums/<id>/delete", methods=['POST'])
 def delete_stadium(id):
     stadium_repository.delete(id)
     return redirect('/') 
-#might need to change the redirect 
+#might need to change the redirect above
+
+#need to create stadium and country show html next. 
+#then edit country controller. 

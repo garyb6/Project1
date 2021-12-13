@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/stadiums" method="post">
+<form action="/stadiums" method="post" class=stadiumform>
 
     <div>
         <label for="name">Name:</label>
@@ -21,7 +21,7 @@
         {% endfor %}
         </select>
     </div>
-    <label for="visited">Visited:</label>
+    <label for="visited">Have you been there before?</label>
     <select id="visited" name="visited">
 
     <option value="true"{% if visited == True %} selected="selected" {% endif %}>Yes</option>
@@ -29,6 +29,7 @@
 
     </select>
     </div>
+    <br>
     <br>
     <button type="submit">Add Stadium</button>
 

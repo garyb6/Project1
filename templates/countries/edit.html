@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/countries/{{country.id}}" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{country.name}}" required>
+    </div>
+
+    <div>
+        <label for="language">Language:</label>
+        <input type="text" id="language" name="language" value="{{country.language}}" required autofocus>
+    </div>
+
+    <div>
+        <label for="visited">Visited?</label>
+        <input type="checkbox" id="visited" name="visited" value={{stadium.visited}} checked>
+        
+    </div>
+    <button type="submit">Country update!</button>
+
+</form>
+
+{% endblock %}

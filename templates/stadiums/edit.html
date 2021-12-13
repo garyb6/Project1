@@ -23,8 +23,12 @@
         {% endfor %}
         </select>
     </div>
-
-    <button type="submit">Update Book</button>
+    <div>
+        <label for="visited">Visited?</label>
+        <input type="checkbox" id="visited" name="visited" value={{stadium.visited}} checked>
+        
+    </div>
+    <button type="submit">Stadium update!</button>
 
 </form>
 

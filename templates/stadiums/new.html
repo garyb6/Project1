@@ -1,1 +1,38 @@
-Hello Pet
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/stadiums" method="post">
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name" required autofocus>
+    </div>
+
+    <div>
+        <label for="category">What sport takes place there?</label>
+        <input type="text" id="category" name="category" placeholder="Stadium category" required autofocus>
+    </div>
+
+    <div>
+        <label for="publisher">Publisher:</label>
+        <input type="text" id="publisher" name="publisher" placeholder="Publisher" required>
+    </div>
+
+
+    <div>
+        <label for="country">Which country is the stadium in?</label>
+        <select id="country" name="country_id">
+        {% for country in all_countries %}
+            <option value="{{ country.id }}">{{ country.name }}</option>
+        {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="visited">Have you been there before?</label>
+        <input type="checkbox" id="visited" name="visited" value={{stadium.visited}} checked>
+    </div>
+    <button type="submit">Add Stadium</button>
+
+</form>
+
+{% endblock %}

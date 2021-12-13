@@ -32,24 +32,20 @@ def show_countries(id):
     return render_template('countries/show.html', country = country)
 
 # EDIT
-# GET '/countries/<id>/edit'
 @countries_blueprint.route("/countries/<id>/edit", methods=['GET'])
 def edit_country(id):
     country = country_repository.select(id)
     return render_template('countries/edit.html', country = country)
 
-# # UPDATE
-# # PUT '/stadiums/<id>'
-# @stadiums_blueprint.route("/stadiums/<id>", methods=['POST'])
-# def update_stadium(id):
-#     name = request.form['name']
-#     category = request.form['category']
-#     country  = country_repository.select(request.form['country_id'])
-#     visited = request.form['visited']
-#     stadium = Stadium(name, category, country, visited, id)
-#     print(stadium.country.name)
-#     stadium_repository.update(stadium)
-#     return redirect('/stadiums')
+# UPDATE
+@countries_blueprint.route("/countries/<id>", methods=['POST'])
+def update_country(id):
+    name = request.form['name']
+    language = request.form['language']
+    visited = request.form['visited']
+    country = Country(name, language, visited, id)
+    country_repository.update(country)
+    return redirect('/countries')
 
 # # DELETE
 # # DELETE '/stadiums/<id>'

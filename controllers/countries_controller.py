@@ -25,19 +25,18 @@ def create_country():
     country_repository.save(country)
     return redirect('/countries')
 
-# # SHOW??
-# @countries_blueprint.route("/countries/<id>", methods=['GET'])
-# def show_countries(id):
-#     country = country_repository.select(id)
-#     return render_template('countries/show.html', country = country)
+# SHOW
+@countries_blueprint.route("/countries/<id>", methods=['GET'])
+def show_countries(id):
+    country = country_repository.select(id)
+    return render_template('countries/show.html', country = country)
 
-# # EDIT
-# # GET '/stadiums/<id>/edit'
-# @stadiums_blueprint.route("/stadiums/<id>/edit", methods=['GET'])
-# def edit_stadium(id):
-#     stadium = stadium_repository.select(id)
-#     countries = country_repository.select_all()
-#     return render_template('stadiums/edit.html', stadium = stadium, all_countries = countries)
+# EDIT
+# GET '/countries/<id>/edit'
+@countries_blueprint.route("/countries/<id>/edit", methods=['GET'])
+def edit_country(id):
+    country = country_repository.select(id)
+    return render_template('countries/edit.html', country = country)
 
 # # UPDATE
 # # PUT '/stadiums/<id>'

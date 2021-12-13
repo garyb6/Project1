@@ -13,14 +13,14 @@
     </div>
 
     <div>
-        <label for="visited">Visited?</label>
-        <input type="checkbox" id="visited" name="visited" value={{stadium.visited}} checked>
-        
-    </div>
+        <label for="visited">Visited:</label>
+        <select id="visited" name="visited">
+        <option value="true"{% if country.visited == True %} selected="selected" {% endif %}>True</option>
+        <option value="false"{% if country.visited == False %} selected="selected" {% endif %}>False</option>
+        </select>
+        </div>
     <button type="submit">Country update!</button>
 
 </form>
 
 {% endblock %}
-
-{% extends "base.html" %}

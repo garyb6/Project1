@@ -9,29 +9,15 @@
     </div>
 
     <div>
-        <label for="category">What sport takes place there?</label>
-        <input type="text" id="category" name="category" placeholder="Stadium category" required autofocus>
+        <label for="language">What language is predominantly spoken there?</label>
+        <input type="text" id="language" name="language" placeholder="Language" required autofocus>
     </div>
 
-    <div>
-        <label for="publisher">Publisher:</label>
-        <input type="text" id="publisher" name="publisher" placeholder="Publisher" required>
-    </div>
-
-
-    <div>
-        <label for="country">Which country is the stadium in?</label>
-        <select id="country" name="country_id">
-        {% for country in all_countries %}
-            <option value="{{ country.id }}">{{ country.name }}</option>
-        {% endfor %}
-        </select>
-    </div>
     <div>
         <label for="visited">Have you been there before?</label>
-        <input type="checkbox" id="visited" name="visited" value={{stadium.visited}} checked>
+        <input type="checkbox" id="visited" name="visited" value={{country.visited}} checked>
     </div>
-    <button type="submit">Add Stadium</button>
+    <button type="submit">Add Country</button>
 
 </form>
 

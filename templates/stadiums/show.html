@@ -1,1 +1,14 @@
-Hello Pet
+erm?
+{% extends "base.html" %}
+{% block stadium %}
+
+    <div>
+    <p>{{stadium.name}}</p>
+    <hr>
+    <p>{{stadium.category}}</p>
+    <p>{{stadium.country.name}}</p>
+    <p>{{stadium.visited}}</p>
+    <p><a href="/stadiums/{{stadium.id}}/edit">Edit</a></p>
+    </div>
+
+{% endblock %}

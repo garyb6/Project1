@@ -9,8 +9,7 @@ def save(stadium):
     sql = "INSERT INTO stadiums (name, category, country_id, visited) VALUES (%s, %s, %s, %s) RETURNING *"
     values = [stadium.name, stadium.category, stadium.country.id, stadium.visited]
     results = run_sql(sql, values)
-    id = results[0]['id']
-    stadium.id = id
+    stadium.id = results[0]['id']
     return stadium 
 
 def select_all():
@@ -31,7 +30,7 @@ def select(id):
     if result is not None:
         country = country_repository.select(result['country_id'])
         stadium = Stadium(result['name'], result['category'], country, result['visited'], result['id'])
-        return stadium 
+    return stadium 
 
 def delete_all():
     sql = "DELETE FROM stadiums"

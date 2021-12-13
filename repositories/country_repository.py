@@ -2,7 +2,7 @@ from db.run_sql import run_sql
 
 from models.country import Country
 from models.stadium import Stadium
-import repositories.stadium_repository as stadium_repository 
+
 
 def save(country):
     sql = "INSERT INTO countries (name, language, visited) VALUES (%s, %s, %s) RETURNING *"
@@ -26,9 +26,10 @@ def select(id):
     sql = "SELECT * FROM countries WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
+    
     if result is not None:
         country=Country(result['name'], result['language'], result['visited'], result['id'])
-        return country 
+    return country 
 
 def delete_all():
     sql = "DELETE FROM countries"

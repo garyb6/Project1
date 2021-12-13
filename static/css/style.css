@@ -1,0 +1,11 @@
+.header{background-color: rgb(174, 190, 220);}
+
+#image {
+    width:100vw;
+    height:100vh;
+    background-image: ("images/SJP.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+

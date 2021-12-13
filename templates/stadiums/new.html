@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-<hr>
 {% block content %}
 
 <form action="/stadiums" method="post">
@@ -15,12 +14,6 @@
     </div>
 
     <div>
-        <label for="publisher">Publisher:</label>
-        <input type="text" id="publisher" name="publisher" placeholder="Publisher" required>
-    </div>
-
-
-    <div>
         <label for="country">Which country is the stadium in?</label>
         <select id="country" name="country_id">
         {% for country in all_countries %}
@@ -31,11 +24,12 @@
     <label for="visited">Visited:</label>
     <select id="visited" name="visited">
 
-    <option value="true"{% if stadium.visited == True %} selected="selected" {% endif %}>Yes</option>
-    <option value="false"{% if stadium.visited == False %} selected="selected" {% endif %}>No</option>
+    <option value="true"{% if visited == True %} selected="selected" {% endif %}>Yes</option>
+    <option value="false"{% if visited == False %} selected="selected" {% endif %}>No</option>
 
     </select>
     </div>
+    <br>
     <button type="submit">Add Stadium</button>
 
 </form>

@@ -3,9 +3,9 @@
 #image {
     width:100vw;
     height:100vh;
-    background-image: ("images/SJP.jpg");
+    background-image: url(/static/images/SJP.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover
 }
 
 

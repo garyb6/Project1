@@ -51,7 +51,7 @@ def update_stadium(id):
     country  = country_repository.select(request.form['country_id'])
     visited = request.form['visited']
     stadium = Stadium(name, category, country, visited, id)
-    print(stadium.country.name())
+    print(stadium.country.name)
     stadium_repository.update(stadium)
     return redirect('/stadiums')
 

@@ -61,7 +61,8 @@ def update_stadium(id):
 def delete_stadium(id):
     stadium_repository.delete(id)
     return redirect('/stadiums') 
-#might need to change the redirect above
 
-#need to create stadium and country show html next. 
-#then edit country controller. 
+@stadiums_blueprint.route("/stadiums/")
+def stadiums_visited():
+    stadiums = stadium_repository.select_visited()
+    return render_template("stadiums/visited.html", all_stadiums = stadiums)

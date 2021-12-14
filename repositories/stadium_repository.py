@@ -2,7 +2,6 @@ from db.run_sql import run_sql
 
 from models.country import Country
 from models.stadium import Stadium
-import repositories.stadium_repository as stadium_repository 
 import repositories.country_repository as country_repository 
 
 def save(stadium):
@@ -14,7 +13,7 @@ def save(stadium):
 
 def select_all():
     stadiums = []
-    sql = "SELECT * from stadiums"
+    sql = "SELECT * FROM stadiums"
     results = run_sql(sql)
     for row in results:
         country = country_repository.select(row['country_id'])
@@ -45,3 +44,13 @@ def update(stadium):
     sql = "UPDATE stadiums SET (name, category, country_id, visited) = (%s, %s, %s, %s) WHERE id = %s"
     values = [stadium.name, stadium.category, stadium.country.id, stadium.visited, stadium.id]
     run_sql(sql, values)
+
+def select_visited():
+    stadiums = []
+    sql = "SELECT * FROM stadiums WHERE visited = 'TRUE'"
+    results = run_sql(sql)
+    for row in results:
+        country = country_repository.select(row['country_id'])
+        stadium = Stadium(row['name'], row['category'], country, row['visited'], row['id'])
+        stadiums.append(stadium)
+    return stadiums 

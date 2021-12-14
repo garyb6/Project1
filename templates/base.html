@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/images.css') }}">
     <title>Stadium Bucket List</title>
     <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png"/>
 </head>
@@ -19,10 +20,10 @@
             <nav>
             <ul>
                 <li><a href="{{url_for('home') }}">Home</a></li>
-                <li><a href="{{url_for('stadiums.stadiums') }}">All Stadiums</a></li>
+                <li><a href="{{url_for('countries.new_country') }}">Add a Country</a></li>
+                <li><a href="{{url_for('stadiums.new_stadium') }}">Add a Stadium</a></li>
                 <li><a href="{{url_for('countries.countries') }}">All Countries</a></li>
-                <li><a href="{{url_for('countries.new_country') }}">Add a Country!</a></li>
-                <li><a href="{{url_for('stadiums.new_stadium') }}">Add a Stadium!</a></li>
+                <li><a href="{{url_for('stadiums.stadiums') }}">All Stadiums</a></li>
                 <li><a href="{{url_for('stadiums.stadiums_visited') }}">Stadiums Visited</a></li>
                 <li><a href="{{url_for('stadiums.stadiums_to_visit') }}">Stadiums to tick off</a></li>
                 <li><a href="{{url_for('countries.countries_visited') }}">Countries Visited</a></li>

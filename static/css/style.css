@@ -11,7 +11,7 @@ body{
     background-image: url(/static/images/SJP.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed
+    background-attachment:local
 }
 
 nav{

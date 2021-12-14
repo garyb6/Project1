@@ -8,11 +8,15 @@
         <a href="/stadiums/{{stadium.id}}">{{stadium.name}}</a>
         <br>
         <div>
-            Category? {{stadium.category}} Stadium
+            Category? {{stadium.category}}
             <br>
             Where is it? {{stadium.country.name}}
             <br>
-            Visited?    {{stadium.visited}}    
+            {% if stadium.visited%}
+            <span>Visited? &#10004;</span>
+            {%else%}
+            <span>Visited? &#10008;</span>
+            {% endif %} 
             <br>   
             <br>     
         </div>

@@ -54,3 +54,13 @@ def select_visited():
         stadium = Stadium(row['name'], row['category'], country, row['visited'], row['id'])
         stadiums.append(stadium)
     return stadiums 
+
+def select_to_visit():
+    stadiums = []
+    sql = "SELECT * FROM stadiums WHERE visited = 'FALSE'"
+    results = run_sql(sql)
+    for row in results:
+        country = country_repository.select(row['country_id'])
+        stadium = Stadium(row['name'], row['category'], country, row['visited'], row['id'])
+        stadiums.append(stadium)
+    return stadiums 

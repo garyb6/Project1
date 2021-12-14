@@ -53,3 +53,8 @@ def update_country(id):
 # def delete_stadium(id):
 #     stadium_repository.delete(id)
 #     return redirect('/') 
+
+@countries_blueprint.route("/countries/")
+def countries_visited():
+    countries = country_repository.select_visited()
+    return render_template("countries/visited.html", all_countries = countries)

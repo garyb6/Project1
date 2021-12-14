@@ -44,3 +44,12 @@ def update(country):
     sql = "UPDATE countries SET (name, language, visited) = (%s, %s, %s) WHERE id = %s"
     values = [country.name, country.language, country.visited, country.id]
     run_sql(sql, values)
+
+def select_visited():
+    countries = []
+    sql = "SELECT * FROM countries WHERE visited = 'TRUE'"
+    results = run_sql(sql)
+    for row in results:
+        country = Country(row['name'], row['language'], row['visited'], row['id'])
+        countries.append(country)
+    return countries 

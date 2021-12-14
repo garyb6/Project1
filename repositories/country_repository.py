@@ -47,7 +47,16 @@ def update(country):
 
 def select_visited():
     countries = []
-    sql = "SELECT * FROM countries WHERE visited = 'TRUE'"
+    sql = "SELECT * FROM countries WHERE visited = TRUE"
+    results = run_sql(sql)
+    for row in results:
+        country = Country(row['name'], row['language'], row['visited'], row['id'])
+        countries.append(country)
+    return countries 
+
+def select_to_visit():
+    countries = []
+    sql = "SELECT * FROM countries WHERE visited = 'FALSE'"
     results = run_sql(sql)
     for row in results:
         country = Country(row['name'], row['language'], row['visited'], row['id'])

@@ -58,3 +58,8 @@ def update_country(id):
 def countries_visited():
     countries = country_repository.select_visited()
     return render_template("countries/visited.html", all_countries = countries)
+
+@countries_blueprint.route("/countries/to_visit/")
+def countries_to_visit():
+    countries = country_repository.select_to_visit()
+    return render_template("countries/to_visit.html", all_countries = countries)

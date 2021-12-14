@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 <hr>
 {% block content %}
-
+<section id = "formimage">
 <form action="/countries/{{country.id}}" method="post">
     <div>
         <label for="name">Name:</label>
@@ -23,5 +23,5 @@
     <button type="submit">Country update!</button>
 
 </form>
-
+</section>
 {% endblock %}

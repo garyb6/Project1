@@ -1,1 +1,25 @@
-Hello Pet
+{% extends "base.html" %}
+<hr>
+{% block content %}
+
+{% for stadium in all_stadiums %}
+    <div class="stadium">
+        <div class="content">
+        <a href="/stadiums/{{stadium.id}}">{{stadium.name}}</a>
+        <br>
+        <div>
+            Category? {{stadium.category}}
+            <br>
+            Where is it? {{stadium.country.name}}
+            <br>   
+            <br>     
+        </div>
+        <div class="buttons">
+            <form class="delete-form" action="/stadiums/{{stadium.id}}/delete" method="POST">
+            <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+            </form>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}

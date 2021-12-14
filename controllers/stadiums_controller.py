@@ -66,3 +66,8 @@ def delete_stadium(id):
 def stadiums_visited():
     stadiums = stadium_repository.select_visited()
     return render_template("stadiums/visited.html", all_stadiums = stadiums)
+
+@stadiums_blueprint.route("/stadiums/to_visit/")
+def stadiums_to_visit():
+    stadiums = stadium_repository.select_to_visit()
+    return render_template("stadiums/to_visit.html", all_stadiums = stadiums)

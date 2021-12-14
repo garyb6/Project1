@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-<hr>
-{% block content %}
 
+{% block content %}
+<section id = "image">
 {% for country in all_countries %}
     <div class="country">
         <div class="content">
@@ -23,5 +23,5 @@
         </div>
     </div>
 {% endfor %}
-
+</section>
 {% endblock content %}

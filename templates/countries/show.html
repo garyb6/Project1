@@ -1,12 +1,11 @@
 {% extends "base.html" %}
-<hr>
+<section id = "image">
 {% block content %}
-    <hr>
     <div>
     <p>{{country.name}}</p>
     <p>{{country.language}}</p>
     <p>{{country.visited}}</p>
     <p><a href="/countries/{{country.id}}/edit">Update</a></p>
     </div>
-
+</section>
 {% endblock %}

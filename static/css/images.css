@@ -1,12 +1,12 @@
 #image {
     width:100vw;
     min-height:100vh;
-    background-image: url(/static/images/SJP.jpg);
+    background-image: url(/static/images/gabba.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment:local
 }
-
+/* 
 #formimage {
     width:100vw;
     min-height:100vh;
@@ -33,3 +33,12 @@
     background-size: cover;
     background-attachment:local
 }
+
+#addimage {
+    width:100vw;
+    min-height:100vh;
+    background-image: url(/static/images/maracana.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:local
+} */

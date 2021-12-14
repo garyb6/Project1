@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+<section id = "image">
 {% block stadium %}
     <hr>
     <div>
@@ -8,5 +9,5 @@
     <p>{{stadium.visited}}</p>
     <p><a href="/stadiums/{{stadium.id}}/edit">Edit</a></p>
     </div>
-
+</section>
 {% endblock %}

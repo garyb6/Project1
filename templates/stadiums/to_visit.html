@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 <hr>
 {% block content %}
-
+<section id = "image">
 {% for stadium in all_stadiums %}
     <div class="stadium">
         <div class="content">
@@ -24,7 +24,8 @@
             <button>update</button>
             </form>
         </div>
+        </div>
     </div>
 {% endfor %}
-
+</section>
 {% endblock %}

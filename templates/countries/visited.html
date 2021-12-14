@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 <hr>
 {% block content %}
-
+<section id = "visitedimage">
 {% for country in all_countries %}
     <div class="country">
         <div class="content">
         <a href="/countries/{{country.id}}">{{country.name}}</a>
         <div class="name">
-            Language spoken? {{country.language}}
+            Language spoken: {{country.language}}
             <br>
         </div>
         <!-- <div class="buttons">
@@ -23,5 +23,5 @@
         </div>
     </div>
 {% endfor %}
-
+</section>
 {% endblock content %}

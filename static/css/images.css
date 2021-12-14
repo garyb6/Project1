@@ -24,3 +24,12 @@
     background-size: cover;
     background-attachment:local
 }
+
+#visitedimage {
+    width:100vw;
+    min-height:100vh;
+    background-image: url(/static/images/MSG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:local
+}

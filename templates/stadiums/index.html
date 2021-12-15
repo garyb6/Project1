@@ -11,15 +11,15 @@
         Where is it? {{stadium.country.name}}
             <br>
         {% if stadium.visited%}
-        <span>Visited? &#10004;</span>
+        <span>Visited: &#10004;</span>
         {%else%}
-        <span>Visited? &#10008;</span>
+        <span>Visited: &#10008;</span>
         {% endif %} 
             <br>   
             <br>     
         <div class= "align">
         <div class="buttons">
-            <form class="delete-form button" action="/stadiums/{{stadium.id}}/delete" method="POST">
+            <form class="delete-form" action="/stadiums/{{stadium.id}}/delete" method="POST">
             <button class="icon-button"><i class="fa fa-trash-o fa-3x" style="color: goldenrod" aria-hidden="true"></i></button>
             </form>
         </div>

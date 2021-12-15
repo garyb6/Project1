@@ -2,30 +2,23 @@
 
 {% block content %}
 <section id = "image">
-<body>
-
+<div class="flexbox">
 {% for country in all_countries %}
-    <div class="country">
-        <div class="content">
-        <a href="/countries/{{country.id}}">{{country.name}}</a>
-        <div class="name">
+    <div class="card">
+        <h4>{{country.name}}</h4>
+        <br>
             Language spoken: {{country.language}}
             <br>
-        </div>
-        <!-- <div class="buttons">
-            <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
-            <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
-            </form>
-        </div> -->
-        </div>
+            <br>
+            <br>
+            <br>
         <div class="buttons">
             <form class="update-form" action="/countries/{{country.id}}/edit" method="GET">
-            <button>update</button>
+                <button class="icon-button"><i class="fa fa-edit" style="font-size:24px;"></i></button>
             </form>
         </div>
     </div>
 {% endfor %}
-</body>
+</div>
 </section>
-
 {% endblock content %}

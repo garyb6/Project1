@@ -7,14 +7,12 @@
     <div class="card">
         <h4>{{stadium.name}}</h4>
         <br>
-        <div>
             Category? {{stadium.category}}
             <br>
             <br>
             Where is it? {{stadium.country.name}}
             <br>   
             <br>     
-        </div>
         <div class="align">
         <div class="buttons">
             <form class="delete-form" action="/stadiums/{{stadium.id}}/delete" method="POST">

@@ -29,6 +29,4 @@ stadium_repository.save(stadium3)
 stadium4 = Stadium("Red Bull Arena", "Football", country3, False)
 stadium_repository.save(stadium4) 
 
-stadium5 = Stadium("")
-
 

@@ -1,8 +1,16 @@
 .stadium_flexbox {
+    color: goldenrod;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
+    align-content: space-around;
+    gap: 100px 100px;
+
 }
 .stadium_card{
     border: orangered;
+    flex-grow:  1;
+
 }

@@ -10,6 +10,10 @@
     font-size: 25px;
   }
 
-  .button :hover{
+  form > button:hover{
     color: white;
+}
+
+.button :hover {
+  color: white;
 }

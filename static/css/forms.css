@@ -7,4 +7,18 @@ form{
   line-height: 40px;
   text-align-last: center;
   box-sizing: border-box;
+  background-color: gray;
+}
+
+input[type=text] {
+  background-color: goldenrod;
+  width: 250px;
+  box-shadow: 0 0 5px 3px;
+  padding: 1px;
+  border-radius: 7px;
+}
+
+.select_country {
+  border-radius: 7px;
+  border: 10px
 }

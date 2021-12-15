@@ -43,10 +43,10 @@ h1 {
     ". . . . . ."
 }
 
-a :link {
+/* a:link {
     color: white;
 }
 
-a :visited {
+a:visited {
     color: black;
-}
+} */

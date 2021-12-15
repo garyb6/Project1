@@ -8,14 +8,17 @@
         <h4>{{country.name}}</h4>
             Language spoken: {{country.language}}
             <br>
+            <br>
             {% if country.visited%}
             <span>Visited? &#10004;</span>
             {%else%}
             <span>Visited? &#10008;</span>
             {% endif %} 
+            <br>
+            <br>
         <div class="buttons">
             <form class="update-form" action="/countries/{{country.id}}/edit" method="GET">
-            <button>update</button>
+                <button class="icon-button"><i class="fa fa-edit" style="font-size:24px;"></i></button>
             </form>
         </div>
     </div>

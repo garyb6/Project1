@@ -4,3 +4,38 @@ body{
     font-weight:500;
 }
 
+h1 {
+    padding:10 0 10 0;
+    margin:0;
+    font-size: 100px;
+    color:darkgoldenrod;
+}
+
+.home_header{grid-area: hh;}
+
+.home_paragraph {color:darkgoldenrod;
+    grid-area: hp;
+}
+
+.itemAS {grid-area: B1;}
+.itemAC {grid-area: B2;}
+.itemFS {grid-area: B3;}
+.itemFC {grid-area: B4;}
+.itemSV {grid-area: B5;}
+.itemST {grid-area: B6;}
+.itemCV {grid-area: B7;}
+.itemCT {grid-area: B8;}
+
+.grid {
+    display:grid;
+    grid-template-columns: 15px 1fr 1fr 1fr 1fr 15px;
+    grid-template-rows: auto;
+    gap: 10px 10px;
+    grid-template-areas: 
+    ". . . . . ."
+    ". . hh hh . ."
+    ". . hp hp . ."
+    ". B1 B2 B3 B4 ."
+    ". B5 B6 B7 B8 ."
+    ". . . . . ."
+}

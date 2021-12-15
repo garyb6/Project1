@@ -2,11 +2,10 @@
 <hr>
 {% block content %}
 <section id = "image">
+<div class = "flexbox">
 {% for country in all_countries %}
-    <div class="country">
-        <div class="content">
-        {{country.name}}
-        <div class="name">
+    <div class="card">
+        <h4>{{country.name}}</h4>
             Language spoken: {{country.language}}
             <br>
             {% if country.visited%}
@@ -14,13 +13,6 @@
             {%else%}
             <span>Visited? &#10008;</span>
             {% endif %} 
-        </div>
-        <!-- <div class="buttons">
-            <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
-            <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
-            </form>
-        </div> -->
-        </div>
         <div class="buttons">
             <form class="update-form" action="/countries/{{country.id}}/edit" method="GET">
             <button>update</button>
@@ -28,5 +20,6 @@
         </div>
     </div>
 {% endfor %}
+</div>
 </section>
 {% endblock content %}

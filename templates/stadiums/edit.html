@@ -3,6 +3,7 @@
 
 {% block content %}
 <section id = "image">
+<div class="form">
 <form action="/stadiums/{{stadium.id}}" method="post">
     <div>
         <label for="name">Name:</label>
@@ -37,5 +38,6 @@
     <button class="button" type="submit">Stadium update!</button>
 
 </form>
+</div>
 </section>
 {% endblock %}

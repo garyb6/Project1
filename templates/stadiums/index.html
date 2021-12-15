@@ -2,11 +2,10 @@
 <hr>
 {% block content %}
 <section id = "image">
-<div class = "stadium_flexbox">
+<div class = "flexbox">
     {% for stadium in all_stadiums %}
-    <div class="stadium_card">
+    <div class="card">
         <h4>{{stadium.name}}</h4>
-        
         Category? {{stadium.category}}
             <br>
         Where is it? {{stadium.country.name}}

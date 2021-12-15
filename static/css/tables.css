@@ -1,4 +1,4 @@
-.stadium_flexbox {
+.flexbox {
     color: goldenrod;
     display: flex;
     flex-wrap: wrap;
@@ -7,7 +7,7 @@
     gap: 50px 90px;
 
 }
-.stadium_card{
+.card{
     background-color: gray;
     padding: 1%;
     align-self: center;

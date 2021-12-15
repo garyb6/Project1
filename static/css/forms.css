@@ -1,13 +1,14 @@
 .delete-form{
     display: inline;
   }
+
 form{
-  float: center;
   padding: 0 10%;
   line-height: 40px;
   text-align-last: center;
   box-sizing: border-box;
-  background-color: black;
+  color: black;
+
 }
 
 input[type=text] {
@@ -21,4 +22,8 @@ input[type=text] {
 .select_country {
   border-radius: 7px;
   border: 10px
+}
+
+.form{
+  background-color: black;
 }

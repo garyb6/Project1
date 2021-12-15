@@ -13,13 +13,11 @@ h1 {
 }
 
 .home_header{grid-area: hh;
-padding-bottom: 0pt;
 }
 
 .home_paragraph {font-size: 40px;
     color: white;
     grid-area: hp;
-    margin: 0 4.5;
 }
 
 .itemAS {grid-area: B1;}

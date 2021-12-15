@@ -12,8 +12,8 @@ nav ul{
 
 nav li{
     display: inline-block;
-    margin: 0 60px;
-    padding-top: 20px;
+    margin: 0 80px;
+    padding: 10px;
 
     position: relative;
 }
@@ -51,7 +51,7 @@ nav ul a:hover::before {
 .header{background-color: #2e352e}
 
 header{
-    font-size: 34;
+    font-size: 40;
     font-weight: 300;
     font-style: bold;
 }

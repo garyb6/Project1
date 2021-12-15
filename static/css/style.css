@@ -2,6 +2,7 @@ body{
     margin:0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight:500;
+    color: white;
 }
 
 h1 {
@@ -18,7 +19,7 @@ h1 {
     grid-area: hp;
 }
 
-.itemAS {grid-area: B1}
+.itemAS {grid-area: B1;}
 .itemAC {grid-area: B2;}
 .itemFS {grid-area: B3;}
 .itemFC {grid-area: B4;}
@@ -40,4 +41,12 @@ h1 {
     ". B1 B2 B3 B4 ."
     ". B5 B6 B7 B8 ."
     ". . . . . ."
+}
+
+a :link {
+    color: white;
+}
+
+a :visited {
+    color: black;
 }

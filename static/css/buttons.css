@@ -6,6 +6,10 @@
 
   .button{
     background-color: goldenrod;
-    
+    border-radius: 7px;
     font-size: 25px;
   }
+
+  .button :hover{
+    color: white;
+}

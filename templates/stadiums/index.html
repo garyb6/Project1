@@ -2,12 +2,13 @@
 <hr>
 {% block content %}
 <section id = "image">
-{% for stadium in all_stadiums %}
-    <div class="stadium">
+<div class = "stadium_flexbox">
+    {% for stadium in all_stadiums %}
+    <div class="stadium_card">
         <div class="content">
         <a href="/stadiums/{{stadium.id}}">{{stadium.name}}</a>
         <br>
-        <div>
+        <div class="stadium_card">
             Category? {{stadium.category}}
             <br>
             Where is it? {{stadium.country.name}}
@@ -31,6 +32,8 @@
             </form>
         </div>
     </div>
+    </div>  
 {% endfor %}
+</div>
 </section>
 {% endblock %}

@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 <section id = "image">
+<body>
+
 {% block content %}
     <div>
     <p>{{country.name}}</p>
@@ -7,5 +9,6 @@
     <p>{{country.visited}}</p>
     <p><a href="/countries/{{country.id}}/edit">Update</a></p>
     </div>
+</body>
 </section>
 {% endblock %}

@@ -1,9 +1,10 @@
 .delete-form{
     display: inline;
   }
-.stadiumform{
+form{
   float: center;
   padding: 0 10%;
-  line-height: 30px;
+  line-height: 40px;
   text-align-last: center;
+  box-sizing: border-box;
 }

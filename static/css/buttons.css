@@ -3,3 +3,9 @@
     font-size: 45%;
     color: black
   }
+
+  .button{
+    background-color: goldenrod;
+    color: white;
+    font-size: 25px;
+  }

@@ -13,11 +13,12 @@ h1 {
 
 .home_header{grid-area: hh;}
 
-.home_paragraph {color:darkgoldenrod;
+.home_paragraph {font-size: 40px;
+    color:white;
     grid-area: hp;
 }
 
-.itemAS {grid-area: B1;}
+.itemAS {grid-area: B1}
 .itemAC {grid-area: B2;}
 .itemFS {grid-area: B3;}
 .itemFC {grid-area: B4;}
@@ -28,12 +29,13 @@ h1 {
 
 .grid {
     display:grid;
-    grid-template-columns: 15px 1fr 1fr 1fr 1fr 15px;
+    justify-items: center;
+    grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
     grid-template-rows: auto;
-    gap: 10px 10px;
+    gap: 40px 40px;
     grid-template-areas: 
     ". . . . . ."
-    ". . hh hh . ."
+    ". hh hh hh hh ."
     ". . hp hp . ."
     ". B1 B2 B3 B4 ."
     ". B5 B6 B7 B8 ."

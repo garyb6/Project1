@@ -5,29 +5,30 @@
 <div class = "stadium_flexbox">
     {% for stadium in all_stadiums %}
     <div class="stadium_card">
-        {{stadium.name}}
-        <br>
-            Category? {{stadium.category}}
+        <h4>{{stadium.name}}</h4>
+        
+        Category? {{stadium.category}}
             <br>
-            Where is it? {{stadium.country.name}}
+        Where is it? {{stadium.country.name}}
             <br>
-            {% if stadium.visited%}
-            <span>Visited? &#10004;</span>
-            {%else%}
-            <span>Visited? &#10008;</span>
-            {% endif %} 
+        {% if stadium.visited%}
+        <span>Visited? &#10004;</span>
+        {%else%}
+        <span>Visited? &#10008;</span>
+        {% endif %} 
             <br>   
             <br>     
-    
+        <div class= "align">
         <div class="buttons">
-            <form class="delete-form" action="/stadiums/{{stadium.id}}/delete" method="POST">
+            <form class="delete-form button_align" action="/stadiums/{{stadium.id}}/delete" method="POST">
             <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color: goldenrod" aria-hidden="true"></i></button>
             </form>
         </div>
         <div class="buttons">
-            <form class="update-form" action="/stadiums/{{stadium.id}}/edit" method="GET">
-            <button class="button">update</button>
+            <form class="update-form button_align" action="/stadiums/{{stadium.id}}/edit" method="GET">
+            <button class="button">Update</button>
             </form>
+        </div>
         </div>
     </div>
 {% endfor %}

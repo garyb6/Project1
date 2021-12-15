@@ -4,16 +4,15 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 100px 100px;
+    gap: 50px 90px;
 
 }
 .stadium_card{
-    border: orangered;
     background-color: gray;
-    padding: 5%;
+    padding: 1%;
     align-self: center;
     width: 300px;
     height: 300px;
     box-sizing: border-box;
-
+    font-size: 20px;
 }

@@ -4,16 +4,26 @@
     color: goldenrod
   }
 
-  .button{
+.button{
     background-color: goldenrod;
     border-radius: 7px;
     font-size: 25px;
   }
 
-  form > button:hover{
+form > button:hover{
     color: white;
 }
 
 .button :hover {
   color: white;
+}
+
+.align{
+  display: flex;
+  justify-content: center;
+}
+
+.button_align + .button_align{
+  margin-left: 10px;
+  padding: 2%
 }

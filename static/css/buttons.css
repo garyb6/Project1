@@ -1,7 +1,8 @@
-.trash-button{
+.icon-button{
     display: contents;
     font-size: 45%;
-    color: goldenrod
+    color: goldenrod;
+    margin-left: 50px
   }
 
 .button{
@@ -20,10 +21,11 @@ form > button:hover{
 
 .align{
   display: flex;
-  justify-content: center;
+  justify-content:space-evenly;
+  align-content: space-between;
 }
 
-.button_align + .button_align{
-  margin-left: 10px;
-  padding: 2%
-}
+/* .button_align + .button_align{
+  margin-left: 50px;
+} */
+

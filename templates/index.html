@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <section id = "image">
-<header> STADIUM BUCKET LIST</header>
+    <h1>Stadium Bucket List</h1>
+    <p>Select below for each menu</p>
 <button><a href="{{url_for('stadiums.new_stadium') }}">Add a Stadium</a></button>
 <button><a href="{{url_for('countries.new_country') }}">Add a Country</a></button>
 <button><a href="{{url_for('stadiums.stadiums') }}">Full List of Stadiums</a></button>

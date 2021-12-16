@@ -2,6 +2,8 @@ Bucket List App
 
 Brief:
 
+Build an app to track someone's travel adventures. 
+
 MVP:
 The app should allow the user to track countries and stadiums they want to visit and those they have visited.
 The user should be able to create and edit countries
@@ -16,6 +18,8 @@ Search for destination by continent, stadium or country
 Any other ideas you might come up with
 
 Personal Learning Plan Objectives:
+
+Planning - ensuring that my models, pages and site have been at lest sketched out and wireframes completed to give me an idea and aim to achieve. 
 
 CSS - I will ensure I invest time to properly go through CSS styling, ensuring the basics are consolidated and push myself to ensure the app appearance is more than just satisfactory. 
 
@@ -33,6 +37,7 @@ Get up and running:
 8. To exit flask, use ctrl+C to stop it running
 
 Technologies used:
+
 MacBook Pro
 Visual Studio Code
 Python3

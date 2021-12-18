@@ -17,9 +17,12 @@ def new_country():
 @countries_blueprint.route("/countries",  methods=['POST'])
 def create_country():
     name    = request.form['name']
+    continent = request.form['continent']
     language = request.form['language']
+    description = request.form['description']
     visited = request.form['visited']
-    country = Country(name, language, visited)
+    rating = request.form['rating']
+    country = Country(name, continent, language, description, visited, rating)
     country_repository.save(country)
     return redirect('/countries')
 
@@ -35,10 +38,13 @@ def edit_country(id):
 
 @countries_blueprint.route("/countries/<id>", methods=['POST'])
 def update_country(id):
-    name = request.form['name']
+    name    = request.form['name']
+    continent = request.form['continent']
     language = request.form['language']
+    description = request.form['description']
     visited = request.form['visited']
-    country = Country(name, language, visited, id)
+    rating = request.form['rating']
+    country = Country(name, continent, language, description, visited, rating, id)
     country_repository.update(country)
     return redirect('/countries')
 

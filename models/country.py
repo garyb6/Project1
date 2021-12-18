@@ -1,10 +1,12 @@
 class Country:
 
-    def __init__(self, name, language, review, visited, id = None):
+    def __init__(self, name, continent, language, description, visited, rating, id = None):
         self.name = name
+        self.continent = continent
         self.language = language
-        self.review = review
+        self.review = description
         self.visited = visited
+        self.rating = rating
         self.id = id 
     
     def mark_visited(self):

@@ -7,7 +7,18 @@
     gap: 50px 90px;
 
 }
-.card{
+.countrycard{
+    background-color: black;
+    padding: 1%;
+    align-self: center;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border-radius: 75px 25px;
+}
+
+.stadiumcard {
     background-color: black;
     padding: 1%;
     align-self: center;

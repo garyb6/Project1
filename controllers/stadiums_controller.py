@@ -22,9 +22,12 @@ def new_stadium():
 def create_stadium():
     name    = request.form['name']
     category = request.form['category']
+    description = request.form['description']
+    city = request.form['city']
     country  = country_repository.select(request.form['country_id'])
     visited = request.form['visited']
-    stadium = Stadium(name, category, country, visited)
+    rating = request.form['rating']
+    stadium = Stadium(name, category, description, city, country, visited, rating)
     stadium_repository.save(stadium)
     return redirect('/stadiums')
 
@@ -46,11 +49,14 @@ def edit_stadium(id):
 # PUT '/stadiums/<id>'
 @stadiums_blueprint.route("/stadiums/<id>", methods=['POST'])
 def update_stadium(id):
-    name = request.form['name']
+    name    = request.form['name']
     category = request.form['category']
+    description = request.form['description']
+    city = request.form['city']
     country  = country_repository.select(request.form['country_id'])
     visited = request.form['visited']
-    stadium = Stadium(name, category, country, visited, id)
+    rating = request.form['rating']
+    stadium = Stadium(name, category, description, city, country, visited, rating, id)
     print(stadium.country.name)
     stadium_repository.update(stadium)
     return redirect('/stadiums')

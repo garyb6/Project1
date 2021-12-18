@@ -11,19 +11,33 @@
     </div>
 
     <div>
+        <label for="continent">Continent:</label>
+        <input type="text" id="continent" name="continent" value="{{country.continent}}" required>
+    </div>
+
+    <div>
         <label for="language">What language is predominantly spoken there?</label>
         <input type="text" id="language" name="language" placeholder="Language" required autofocus>
     </div>
 
     <div>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" value="{{country.description}}" required autofocus>
+    </div>
+
+    <div>
         <label for="visited">Have you been there before?</label>
         <select id="visited" name="visited">
-    
-        <option value="true"{% if visited == True %} selected="selected" {% endif %}>Yes</option>
-        <option value="false"{% if visited == False %} selected="selected" {% endif %}>No</option>
-    
+            <option value="true"{% if visited == True %} selected="selected" {% endif %}>Yes</option>
+            <option value="false"{% if visited == False %} selected="selected" {% endif %}>No</option>
         </select>
         </div>
+    
+    <div>
+        <label for="rating" >Rating (1-5):</label>
+        <input type="range" id="rating" name="rating" min="1" max="5" step="0.25" value="{{country.rating}}">
+    </div>
+
     <button class="button" type="submit">Add Country</button>
 
 </form>

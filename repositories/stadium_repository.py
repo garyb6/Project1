@@ -1,12 +1,11 @@
 from db.run_sql import run_sql
 
-from models.country import Country
 from models.stadium import Stadium
 import repositories.country_repository as country_repository 
 
 def save(stadium):
-    sql = "INSERT INTO stadiums (name, category, country_id, visited) VALUES (%s, %s, %s, %s) RETURNING *"
-    values = [stadium.name, stadium.category, stadium.country.id, stadium.visited]
+    sql = "INSERT INTO stadiums (name, category, description, city, country_id, visited, rating) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING *"
+    values = [stadium.name, stadium.category, stadium.description, stadium.city, stadium.country.id, stadium.visited, stadium.rating]
     results = run_sql(sql, values)
     stadium.id = results[0]['id']
     return stadium 
@@ -17,7 +16,7 @@ def select_all():
     results = run_sql(sql)
     for row in results:
         country = country_repository.select(row['country_id'])
-        stadium = Stadium(row['name'], row['category'], country, row['visited'], row['id'])
+        stadium = Stadium(row['name'], row['category'], row['description'], row['city'], country, row['visited'], row['rating'], row['id'])
         stadiums.append(stadium)
     return stadiums 
 
@@ -28,7 +27,7 @@ def select(id):
     result = run_sql(sql, values)[0]
     if result is not None:
         country = country_repository.select(result['country_id'])
-        stadium = Stadium(result['name'], result['category'], country, result['visited'], result['id'])
+        stadium = Stadium(result['name'], result['category'], result['description'], result['city'], country, result['visited'], result['rating'], result['id'])
     return stadium 
 
 def delete_all():
@@ -41,8 +40,8 @@ def delete(id):
     run_sql(sql, values)
 
 def update(stadium):
-    sql = "UPDATE stadiums SET (name, category, country_id, visited) = (%s, %s, %s, %s) WHERE id = %s"
-    values = [stadium.name, stadium.category, stadium.country.id, stadium.visited, stadium.id]
+    sql = "UPDATE stadiums SET (name, category, description, city, country_id, visited, rating) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [stadium.name, stadium.category, stadium.description, stadium.city, stadium.country.id, stadium.visited, stadium.rating, stadium.id]
     run_sql(sql, values)
 
 def select_visited():
@@ -51,7 +50,7 @@ def select_visited():
     results = run_sql(sql)
     for row in results:
         country = country_repository.select(row['country_id'])
-        stadium = Stadium(row['name'], row['category'], country, row['visited'], row['id'])
+        stadium = Stadium(row['name'], row['category'], row['description'], row['city'], country, row['visited'], row['rating'], row['id'])
         stadiums.append(stadium)
     return stadiums 
 
@@ -61,6 +60,6 @@ def select_to_visit():
     results = run_sql(sql)
     for row in results:
         country = country_repository.select(row['country_id'])
-        stadium = Stadium(row['name'], row['category'], country, row['visited'], row['id'])
+        stadium = Stadium(row['name'], row['category'], row['description'], row['city'], country, row['visited'], row['rating'], row['id'])
         stadiums.append(stadium)
     return stadiums 

@@ -5,8 +5,8 @@ from models.stadium import Stadium
 
 
 def save(country):
-    sql = "INSERT INTO countries (name, language, visited) VALUES (%s, %s, %s) RETURNING *"
-    values = [country.name, country.language, country.visited]
+    sql = "INSERT INTO countries (name, continent, language, description, visited, rating) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
+    values = [country.name, country.continent, country.language, country.description, country.visited, country.rating]
     results = run_sql(sql, values)
     id = results[0]['id']
     country.id = id

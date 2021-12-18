@@ -17,7 +17,7 @@ def select_all():
     sql = "SELECT * from countries"
     results = run_sql(sql)
     for row in results:
-        country = Country(row['name'], row['language'], row['visited'], row['id'])
+        country = Country(row['name'], row['continent'], row['language'], row['description'], row['visited'], row['rating'], row['id'])
         countries.append(country)
     return countries 
 
@@ -28,7 +28,7 @@ def select(id):
     result = run_sql(sql, values)[0]
     
     if result is not None:
-        country=Country(result['name'], result['language'], result['visited'], result['id'])
+        country=Country(result['name'], result['continent'], result['language'], result['description'], result['visited'], result ['rating'], result['id'])
     return country 
 
 def delete_all():
@@ -41,8 +41,8 @@ def delete(id):
     run_sql(sql, values)
 
 def update(country):
-    sql = "UPDATE countries SET (name, language, visited) = (%s, %s, %s) WHERE id = %s"
-    values = [country.name, country.language, country.visited, country.id]
+    sql = "UPDATE countries SET (name, continent, language, description, visited, rating) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [country.name, country.continent, country.language, country.description, country.visited, country.rating, country.id]
     run_sql(sql, values)
 
 def select_visited():
@@ -50,7 +50,7 @@ def select_visited():
     sql = "SELECT * FROM countries WHERE visited = TRUE"
     results = run_sql(sql)
     for row in results:
-        country = Country(row['name'], row['language'], row['visited'], row['id'])
+        country = Country(row['name'], row['continent'], row['language'], row['description'], row['visited'], row['rating'], row['id'])
         countries.append(country)
     return countries 
 
@@ -59,6 +59,6 @@ def select_to_visit():
     sql = "SELECT * FROM countries WHERE visited = 'FALSE'"
     results = run_sql(sql)
     for row in results:
-        country = Country(row['name'], row['language'], row['visited'], row['id'])
+        country = Country(row['name'], row['continent'], row['language'], row['description'], row['visited'], row['rating'], row['id'])
         countries.append(country)
     return countries 

@@ -7,7 +7,8 @@ def save(stadium):
     sql = "INSERT INTO stadiums (name, category, description, city, country_id, visited, rating) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING *"
     values = [stadium.name, stadium.category, stadium.description, stadium.city, stadium.country.id, stadium.visited, stadium.rating]
     results = run_sql(sql, values)
-    stadium.id = results[0]['id']
+    id = results[0]['id']
+    stadium.id = id 
     return stadium 
 
 def select_all():

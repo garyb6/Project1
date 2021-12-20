@@ -5,22 +5,22 @@
 
     <div>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="{{stadium.name}}" required autofocus>
+        <input type="text" id="name" name="name" required autofocus>
     </div>
 
     <div>
         <label for="category">Category:</label>
-        <input type="text" id="category" name="category" value="{{stadium.category}}" required autofocus>
+        <input type="text" id="category" name="category" required autofocus>
     </div>
 
     <div>
         <label for="description">Description:</label>
-        <input type="text" id="description" name="description" value="{{stadium.description}}">
+        <input type="text" id="description" name="description">
     </div>
 
     <div>
         <label for="city">City:</label>
-        <input type="text" id="city" name="city" value="{{stadium.city}}" required autofocus>
+        <input type="text" id="city" name="city" required autofocus>
     </div>
 
     <div class="select_country">
@@ -28,7 +28,7 @@
         <select id="country" name="country_id">
         {% for country in all_countries %}
             <option value="{{ country.id }}"
-            {% if stadium.country.id == country.id %} selected="selected"{% endif %}>
+            {% if country.id == country.id %} selected="selected"{% endif %}>
             {{ country.name }}
             </option>
         {% endfor %}
@@ -39,15 +39,15 @@
         <label for="visited">Visited:</label>
         <select id="visited" name="visited">
     
-        <option value="true"{% if stadium.visited == True %} selected="selected" {% endif %}>Yes</option>
-        <option value="false"{% if stadium.visited == False %} selected="selected" {% endif %}>No</option>
+        <option value="true"{% if visited == True %} selected="selected" {% endif %}>Yes</option>
+        <option value="false"{% if visited == False %} selected="selected" {% endif %}>No</option>
     
         </select>
     </div>
 
     <div>
         <label for="rating" >Rating (1-5):</label>
-        <input type="range" id="rating" name="rating" min="1" max="5" step="0.25" value="{{country.rating}}" required>
+        <input type="range" id="rating" name="rating" min="1" max="5" step="0.25" required>
     </div>
     <br>
     <br>

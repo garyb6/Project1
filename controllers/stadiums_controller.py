@@ -11,7 +11,6 @@ def stadiums():
     stadiums = stadium_repository.select_all()
     return render_template("stadiums/index.html", all_stadiums = stadiums)
 
-#NEW
 @stadiums_blueprint.route("/stadiums/new", methods=['GET'])
 def new_stadium():
     countries = country_repository.select_all()

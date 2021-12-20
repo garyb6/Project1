@@ -29,6 +29,6 @@ class TestCountry(unittest.TestCase):
     def test_country_rating(self):
         self.assertEqual(3, self.country.rating)
     
-    # def test_can_change_rating(self):
-    #     self.country.change_rating()
-    #     self.assertEqual(4, self.country.rating)
+    def test_can_change_rating(self):
+        self.country.change_rating()
+        self.assertEqual(4, self.country.rating)

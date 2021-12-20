@@ -31,6 +31,6 @@ class TestStadium(unittest.TestCase):
     def test_stadium_rating(self):
         self.assertEqual(5, self.stadium.rating)
 
-    # def test_change_rating(self):
-    #     self.stadium.change_rating()
-    #     self.assertEqual(2, self.stadium.rating)
+    def test_change_rating(self):
+        self.stadium.change_rating()
+        self.assertEqual(2, self.stadium.rating)

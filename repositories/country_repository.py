@@ -7,13 +7,12 @@ def save(country):
     sql = "INSERT INTO countries (name, continent, language, description, visited, rating) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
     values = [country.name, country.continent, country.language, country.description, country.visited, country.rating]
     results = run_sql(sql, values)
-    id = results[0]['id']
-    country.id = id
-    return country 
+    country.id = results[0]['id']
+    return country
 
 def select_all():
     countries = []
-    sql = "SELECT * from countries"
+    sql = "SELECT * FROM countries"
     results = run_sql(sql)
     for row in results:
         country = Country(row['name'], row['continent'], row['language'], row['description'], row['visited'], row['rating'], row['id'])

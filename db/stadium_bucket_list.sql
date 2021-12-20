@@ -6,18 +6,18 @@ CREATE TABLE countries (
     name VARCHAR(255),
     continent VARCHAR(255),
     language VARCHAR(255),
-    description TEXT,
+    description VARCHAR(255),
     visited BOOLEAN,
-    rating FLOAT,
+    rating FLOAT
 );
 
 CREATE TABLE stadiums (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     category VARCHAR(255),
-    description TEXT,
+    description VARCHAR (255),
     city VARCHAR(255),
-    country_id INT REFERENCES countries(id)
+    country_id INT REFERENCES countries(id),
     visited BOOLEAN,
-    rating FLOAT, 
+    rating FLOAT 
     );

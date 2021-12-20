@@ -12,3 +12,6 @@ class Stadium:
     
     def mark_visited(self):
         self.visited = True
+    
+    def change_rating(self):
+        self.rating = 2

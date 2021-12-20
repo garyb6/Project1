@@ -28,3 +28,8 @@
     font-size: 20px;
     border-radius: 25px 75px;
 }
+
+.stadiumcard > a:visited{
+    text-decoration: none;
+    color: goldenrod;
+}

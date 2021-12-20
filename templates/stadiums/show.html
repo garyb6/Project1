@@ -1,14 +1,15 @@
-<!-- {% extends "base.html" %}
+{% extends "base.html" %}
+{% block content %}
 <section id = "image">
-{% block stadium %}
-    <hr>
-    <div>
+    <div class = "stadium.card">
     <p>{{stadium.name}}</p>
     <p>{{stadium.category}}</p>
     <p>{{stadium.description}}</p>
+    <p>{{stadium.city}}</p>
     <p>{{stadium.country.name}}</p>
     <p>{{stadium.visited}}</p>
-    <p><a href="/stadiums/{{stadium.id}}/edit">Edit</a></p>
+    <p>{{stadium.rating}}</p>
+    <p><a href="/stadiums/{{stadium.id}}/edit">Update</a></p>
     </div>
 </section>
-{% endblock %} -->
+{% endblock %}

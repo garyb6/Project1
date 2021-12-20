@@ -23,14 +23,14 @@ nav ul a{
 }
 
 nav ul a:hover {
-    color: #000;
+    color: white;
 }
 
 nav ul a::before {
     content: '';
     display: block;
     height: 2px;
-    background-color: white;
+    background-color: black;
     position: absolute;
     top: 0;
     width: 0%;

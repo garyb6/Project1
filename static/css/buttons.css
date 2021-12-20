@@ -8,7 +8,15 @@
 .button{
     background-color: goldenrod;
     border-radius: 7px;
-    font-size: 25px;
+    font-size: 24px;
+    color: black
+  }
+  
+form > .button{
+    background-color: goldenrod;
+    border-radius: 7px;
+    font-size: 24px;
+    color: black
   }
 
 form > button:hover{

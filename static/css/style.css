@@ -17,6 +17,7 @@ h1 {
 
 .home_paragraph {font-size: 40px;
     color: white;
+    background-color: black;
     grid-area: hp;
 }
 
@@ -44,3 +45,11 @@ h1 {
     ". . . . . ."
 }
 
+a:visited {
+    text-decoration: none;
+    color: goldenrod;
+}
+
+.linktext{
+    color:white;
+}

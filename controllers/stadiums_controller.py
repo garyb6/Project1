@@ -17,7 +17,6 @@ def new_stadium():
     countries = country_repository.select_all()
     return render_template("stadiums/new.html", all_countries = countries)
 
-# CREATE
 @stadiums_blueprint.route("/stadiums",  methods=['POST'])
 def create_stadium():
     name    = request.form['name']
@@ -31,22 +30,17 @@ def create_stadium():
     stadium_repository.save(stadium)
     return redirect('/stadiums')
 
-# SHOW??
 @stadiums_blueprint.route("/stadiums/<id>", methods=['GET'])
 def show_stadium(id):
     stadium = stadium_repository.select(id)
     return render_template('stadiums/show.html', stadium = stadium)
 
-# EDIT
-# GET '/stadiums/<id>/edit'
 @stadiums_blueprint.route("/stadiums/<id>/edit", methods=['GET'])
 def edit_stadium(id):
     stadium = stadium_repository.select(id)
     countries = country_repository.select_all()
     return render_template('stadiums/edit.html', stadium = stadium, all_countries = countries)
 
-# UPDATE
-# PUT '/stadiums/<id>'
 @stadiums_blueprint.route("/stadiums/<id>", methods=['POST'])
 def update_stadium(id):
     name    = request.form['name']
@@ -61,8 +55,6 @@ def update_stadium(id):
     stadium_repository.update(stadium)
     return redirect('/stadiums')
 
-# DELETE
-# DELETE '/stadiums/<id>'
 @stadiums_blueprint.route("/stadiums/<id>/delete", methods=['POST'])
 def delete_stadium(id):
     stadium_repository.delete(id)

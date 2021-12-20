@@ -5,29 +5,49 @@
 
     <div>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Name" required autofocus>
+        <input type="text" id="name" name="name" value="{{stadium.name}}" required autofocus>
     </div>
 
     <div>
-        <label for="category">What sport takes place there?</label>
-        <input type="text" id="category" name="category" placeholder="Stadium category" required autofocus>
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" value="{{stadium.category}}" required autofocus>
     </div>
 
     <div>
-        <label for="country">Which country is the stadium in?</label>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" value="{{stadium.description}}">
+    </div>
+
+    <div>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" value="{{stadium.city}}" required autofocus>
+    </div>
+
+    <div class="select_country">
+        <label for="country">Country:</label>
         <select id="country" name="country_id">
         {% for country in all_countries %}
-            <option value="{{ country.id }}">{{ country.name }}</option>
+            <option value="{{ country.id }}"
+            {% if stadium.country.id == country.id %} selected="selected"{% endif %}>
+            {{ country.name }}
+            </option>
         {% endfor %}
         </select>
     </div>
-    <label for="visited">Have you been there before?</label>
-    <select id="visited" name="visited">
 
-    <option value="true"{% if visited == True %} selected="selected" {% endif %}>Yes</option>
-    <option value="false"{% if visited == False %} selected="selected" {% endif %}>No</option>
+    <div>
+        <label for="visited">Visited:</label>
+        <select id="visited" name="visited">
+    
+        <option value="true"{% if stadium.visited == True %} selected="selected" {% endif %}>Yes</option>
+        <option value="false"{% if stadium.visited == False %} selected="selected" {% endif %}>No</option>
+    
+        </select>
+    </div>
 
-    </select>
+    <div>
+        <label for="rating" >Rating (1-5):</label>
+        <input type="range" id="rating" name="rating" min="1" max="5" step="0.25" value="{{country.rating}}" required>
     </div>
     <br>
     <br>

@@ -51,7 +51,7 @@ def update_country(id):
 @countries_blueprint.route("/countries/<id>/delete", methods=['POST'])
 def delete_country(id):
     country_repository.delete(id)
-    return redirect('/countries') 
+    return redirect('/countries')
 
 @countries_blueprint.route("/countries/")
 def countries_visited():

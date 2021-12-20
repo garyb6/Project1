@@ -10,8 +10,15 @@
         <div>
             Location: {{stadium.country.name}}
             <br>   
-            <br>     
+            <br>    
+            {% if stadium.visited%}
+        <span>Rating: {{stadium.rating}}</span>
+        {% endif %} 
+            <br>
+            <br>
+            <br>
         </div>
+        
         <div class="align">
             <div class="buttons">
                 <form class="delete-form" action="/stadiums/{{stadium.id}}/delete" method="POST">

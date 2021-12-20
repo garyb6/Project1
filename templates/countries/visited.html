@@ -9,7 +9,9 @@
         Continent: {{country.continent}}
         <br>
         <br>
-        Rating: {{country.rating}}
+        {% if country.visited%}
+        <span>Rating: {{country.rating}}</span>
+        {% endif %} 
         <br>
         <br>
         <div class="buttons">

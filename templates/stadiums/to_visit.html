@@ -5,8 +5,8 @@
 <div class = "flexbox">
 {% for stadium in all_stadiums %}
     <div class="stadiumcard">
-        <h4>{{stadium.name}}</h4>
-        <br>
+        <h4><a href="/stadiums/{{stadium.id}}">{{stadium.name}}</a></h4>
+            <br>
             Location: {{stadium.country.name}}
             <br>   
             <br>     

@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 <section id = "image">
-<div class="countrycard">
-    <p>{{country.name}}</p>
-    <p>{{country.continent}}</p>
-    <p>{{country.language}}</p>
-    <p>{{country.description}}</p>
-    <p>{{country.visited}}</p>
-    <p>{{country.rating}}</p>
+<div class="expandedcountrycard">
+    <br>
+    <p>Name - {{country.name}}</p>
+    <p>Where in the world? {{country.continent}}</p>
+    <p>Main language spoken? {{country.language}}</p>
+    <p>What makes it special? {{country.description}}</p>
+    <p>Have you been there? {{country.visited}}</p>
+    <p>What would you rate it? {{country.rating}}</p>
+    <br>
+    <br>
     <div class="align">
         <div class="buttons">
             <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">

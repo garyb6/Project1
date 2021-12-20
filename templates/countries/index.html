@@ -5,7 +5,8 @@
 <div class = "flexbox">
 {% for country in all_countries %}
     <div class="countrycard">
-        <h4>{{country.name}}</h4>
+        <h4><a href="/countries/{{country.id}}">{{country.name}}</a></h4>
+        <br>
             Continent: {{country.continent}}
             <br>
             <br>
@@ -35,3 +36,5 @@
 </div>
 </section>
 {% endblock content %}
+
+<h4><a href="/stadiums/{{stadium.id}}">{{stadium.name}}</a></h4>

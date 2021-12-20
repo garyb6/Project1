@@ -2,13 +2,16 @@
     display: inline;
   }
 
+.delete-form:hover {
+    color: white;
+  }
+
 form{
   padding: 0 10%;
   line-height: 40px;
   text-align-last: center;
   box-sizing: border-box;
   color: black;
-
 }
 
 input[type=text] {

@@ -1,15 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 <section id = "image">
-    <div class = "stadium.card">
-    <p>{{stadium.name}}</p>
-    <p>{{stadium.category}}</p>
-    <p>{{stadium.description}}</p>
-    <p>{{stadium.city}}</p>
-    <p>{{stadium.country.name}}</p>
-    <p>{{stadium.visited}}</p>
-    <p>{{stadium.rating}}</p>
-    <p><a href="/stadiums/{{stadium.id}}/edit">Update</a></p>
+    <div class = "expandedcard">
+    <p>Name - {{stadium.name}}</p>
+    <p>Whats played there? {{stadium.category}}</p>
+    <p>What makes it special? {{stadium.description}}</p>
+    <p>Which city is it in?{{stadium.city}}</p>
+    <p>Which country is it in?{{stadium.country.name}}</p>
+    <p>Have you been there?{{stadium.visited}}</p>
+    <p>How would you rate it out of 5?{{stadium.rating}}</p>
+    <br>
+    <br>
+    <div class="align">
+        <div class="buttons">
+            <form class="delete-form" action="/stadiums/{{stadium.id}}/delete" method="POST">
+                <button class="icon-button"><i class="fa fa-trash-o fa-3x" style="color:goldenrod" aria-hidden="true"></i></button>
+            </form>
+        </div>
+        <div class="buttons">
+            <form class="update-form" action="/stadiums/{{stadium.id}}/edit" method="GET">
+                <button class="icon-button"><i class="fa fa-edit" style="font-size:24px;"></i></button>
+            </form>
+        </div>
+    </div>
     </div>
 </section>
 {% endblock %}

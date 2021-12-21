@@ -53,3 +53,7 @@ a:visited {
 .linktext{
     color:white;
 }
+
+.linktext:hover{
+    text-emphasis: bold;
+}

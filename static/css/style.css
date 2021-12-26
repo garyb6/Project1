@@ -12,6 +12,12 @@ h1 {
     color:darkgoldenrod;
 }
 
+h2{
+    margin-top: 0;
+    padding: 5;
+    position:relative;
+}
+
 .home_header{grid-area: hh;
 }
 
@@ -56,4 +62,4 @@ a:visited {
 
 .linktext:hover{
     text-emphasis: bold;
-}
+} 

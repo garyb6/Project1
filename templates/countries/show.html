@@ -7,10 +7,15 @@
     <p>Where in the world? {{country.continent}}</p>
     <p>Main language spoken? {{country.language}}</p>
     <p>What makes it special? {{country.description}}</p>
-    <p>Have you been there? {{country.visited}}</p>
-    <p>What would you rate it? {{country.rating}}</p>
-    <br>
-    <br>
+    <p>Have you visited?       
+        {% if country.visited%}
+        <span>&#10004;</span>
+        <p>How many stars? {{country.rating}}</p>
+        {%else%}
+        <span>&#10008;</span>
+        {% endif %} 
+        <br>
+        <br>
     <div class="align">
         <div class="buttons">
             <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">

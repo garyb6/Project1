@@ -30,7 +30,7 @@ Get up and running:
 1. Git pull Project1, link: https://github.com/garyb6/Project1 
 2. Open the directory in your chosen code editor
 3. Create database stadium_bucket_list.sql through either terminal or psql terminal
-4. Execute the PostgreSQL script in terminal: 'psql -d stadium_bucket_list -f stadium_bucket_list.sql'
+4. Execute the PostgreSQL script in terminal: 'psql -d stadium_bucket_list -f db/stadium_bucket_list.sql'
 5. Run console.py file ('python3 console.py') in terminal
 6. At this point you could run positco or another programme to doublecheck the database has been created
 7. Run Flask ('flask run' in terminal) and open local page in your chosen browser (Chrome is suggested)

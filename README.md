@@ -27,7 +27,7 @@ Ensuring pages are correctly accessed - Within the last couple of weeks, I have 
 
 Get up and running:
 
-1. Git pull Project1, link: https://github.com/garyb6/Stadium-Bucket-List 
+1. In the command line, pull down the project, link: https://github.com/garyb6/Stadium-Bucket-List 
 2. Open the directory in your chosen code editor
 3. Create database stadium_bucket_list.sql through either terminal or psql terminal
 4. Execute the PostgreSQL script in terminal: 'psql -d stadium_bucket_list -f db/stadium_bucket_list.sql'
@@ -45,4 +45,5 @@ PostgreSQL
 psycopg2
 unittest
 Postico
+Flask
 Font Awesome
